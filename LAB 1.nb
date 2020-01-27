@@ -1,0 +1,2131 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     84018,       2123]
+NotebookOptionsPosition[     79070,       2029]
+NotebookOutlinePosition[     79409,       2044]
+CellTagsIndexPosition[     79366,       2041]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7889005484481277`*^9, 
+  3.788900549885539*^9}},ExpressionUUID->"93016707-905e-4ec8-8a2d-\
+d88b7e60a35e"],
+
+Cell[CellGroupData[{
+
+Cell["Lab 1", "Title",
+ CellChangeTimes->{{3.788900802931235*^9, 
+  3.7889008095567656`*^9}},ExpressionUUID->"67385996-a144-4b9c-8f10-\
+cb8404e891ea"],
+
+Cell["\<\
+Michael Curry
+1/24/2020\
+\>", "Subtitle",
+ CellChangeTimes->{{3.7889008218070498`*^9, 
+  3.788900833104353*^9}},ExpressionUUID->"f07c4640-774a-4c14-8ea9-\
+6c27c2add53e"],
+
+Cell[CellGroupData[{
+
+Cell["List out the first 48 Lucas Numbers", "Section",
+ CellChangeTimes->{{3.7889008479318643`*^9, 
+  3.788900855555855*^9}},ExpressionUUID->"29ac9303-cdc6-4b5e-9584-\
+5ccbedb2649c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryParseResults",
+  DynamicModuleBox[{Typeset`q$$ = "Table[LucasL[i],{i,48}]", Typeset`newq$$ = 
+   "Table[LucasL[i],{i,48}]", Typeset`chosen$$ = "Table[LucasL[i], {i, 48}]", 
+   Typeset`open$$ = False}, 
+   PaneSelectorBox[{False->
+    DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+     WolframAlphaClient`Private`assumptionsQ$$ = False}, 
+     TagBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {
+           InputFieldBox[Dynamic[Typeset`newq$$], String,
+            Appearance->None,
+            BaseStyle->{"CalculateInput"},
+            ContinuousAction->True,
+            Enabled->True,
+            FieldSize->{{1, 40}, {1, 
+               DirectedInfinity[1]}},
+            TrapSelection->False], 
+           ItemBox[
+            ButtonBox[
+             PaneSelectorBox[{True->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "OrangeSquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ], False->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "GraySquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ]}, Dynamic[WolframAlphaClient`Private`show$$],
+              ImageSize->All],
+             Appearance->None,
+             ButtonFunction:>(Quiet[
+                WolframAlpha[]]; If[
+                Or[
+                 CurrentValue["OptionKey"], 
+                 CurrentValue["AltKey"]], SelectionMove[
+                  ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                  Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                   "TextForm"], All], Typeset`open$$ = True; 
+                WolframAlphaClient`Private`extrudeFromFastParse[
+                 "Table[LucasL[i],{i,48}]", 
+                  Defer[
+                   Table[
+                    LucasL[Global`i], {Global`i, 48}]], "Fast parse"]; 
+                Typeset`open$$ = False]),
+             Evaluator->Automatic,
+             Method->"Queued"],
+            Alignment->{Right, Top},
+            StripOnInput->False]},
+          {
+           PaneBox[
+            TagBox[
+             TooltipBox[
+              ButtonBox[
+               PaneSelectorBox[{False->
+                StyleBox[
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"LucasL", "[", "i", "]"}], ",", " ", 
+                   RowBox[{"{", 
+                    RowBox[{"i", ",", " ", "48"}], "}"}]}], "]"}],
+                 StripOnInput->False,
+                 NumberMarks->False], True->
+                StyleBox[
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"LucasL", "[", "i", "]"}], ",", " ", 
+                   RowBox[{"{", 
+                    RowBox[{"i", ",", " ", "48"}], "}"}]}], "]"}],
+                 StripOnInput->False,
+                 ShowSyntaxStyles->False,
+                 NumberMarks->False,
+                 FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                 CurrentValue["MouseOver"]],
+                BaseStyle->{ShowStringCharacters -> True},
+                FrameMargins->0,
+                ImageSize->Automatic],
+               Alignment->Left,
+               Appearance->None,
+               BaseStyle->{},
+               ButtonFunction:>(SelectionMove[
+                  ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                   BoxData[
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"LucasL", "[", "i", "]"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", " ", "48"}], "}"}]}], "]"}]], "Input"], 
+                  All]; SelectionMove[
+                  ButtonNotebook[], After, CellContents]),
+               Evaluator->Automatic,
+               ImageSize->Automatic,
+               Method->"Preemptive"],
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                StandardForm]]],
+             Annotation[#, 
+              Dynamic[
+               FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+              "Tooltip"]& ],
+            AppearanceElements->{},
+            BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+            ImageSize->{Automatic, {1, 100}},
+            Scrollbars->{False, Automatic}], "\[SpanFromLeft]"}
+         },
+         AutoDelete->False,
+         BaselinePosition->{1, 1},
+         FrameStyle->GrayLevel[0.85],
+         GridBoxAlignment->{"Columns" -> {{Left}}},
+         GridBoxDividers->{
+          "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->Top,
+       Background->Dynamic[
+         FEPrivate`If[
+          FEPrivate`And[
+           FEPrivate`SameQ[
+            FEPrivate`Head[Typeset`newq$$], String], 
+           FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+          RGBColor[1., 0.975, 0.95], 
+          GrayLevel[1]]],
+       BaselinePosition->Baseline,
+       FrameStyle->GrayLevel[0.85],
+       ImageSize->Automatic,
+       RoundingRadius->5,
+       StripOnInput->False],
+      EventHandlerTag[{
+       "MouseEntered" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, True], "MouseExited" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, False], Method -> 
+        "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> True}]],
+     DynamicModuleValues:>{}], True->
+    TagBox[GridBox[{
+       {
+        DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+         WolframAlphaClient`Private`assumptionsQ$$ = False}, 
+         TagBox[
+          FrameBox[
+           TagBox[GridBox[{
+              {
+               InputFieldBox[Dynamic[Typeset`newq$$], String,
+                Appearance->None,
+                BaseStyle->{"CalculateInput"},
+                ContinuousAction->True,
+                Enabled->True,
+                FieldSize->{{1, 40}, {1, 
+                   DirectedInfinity[1]}},
+                TrapSelection->False], 
+               ItemBox[
+                ButtonBox[
+                 PaneSelectorBox[{True->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "OrangeSquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ], False->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "GraySquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ]}, Dynamic[
+                  WolframAlphaClient`Private`show$$],
+                  ImageSize->All],
+                 Appearance->None,
+                 ButtonFunction:>(Quiet[
+                    WolframAlpha[]]; If[
+                    Or[
+                    CurrentValue["OptionKey"], 
+                    CurrentValue["AltKey"]], SelectionMove[
+                    ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                    NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                    "TextForm"], All], Typeset`open$$ = True; 
+                    WolframAlphaClient`Private`extrudeFromFastParse[
+                    "Table[LucasL[i],{i,48}]", 
+                    Defer[
+                    Table[
+                    LucasL[Global`i], {Global`i, 48}]], "Fast parse"]; 
+                    Typeset`open$$ = False]),
+                 Evaluator->Automatic,
+                 Method->"Queued"],
+                Alignment->{Right, Top},
+                StripOnInput->False]},
+              {
+               PaneBox[
+                TagBox[
+                 TooltipBox[
+                  ButtonBox[
+                   PaneSelectorBox[{False->
+                    StyleBox[
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"LucasL", "[", "i", "]"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", " ", "48"}], "}"}]}], "]"}],
+                    StripOnInput->False,
+                    NumberMarks->False], True->
+                    StyleBox[
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"LucasL", "[", "i", "]"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", " ", "48"}], "}"}]}], "]"}],
+                    StripOnInput->False,
+                    ShowSyntaxStyles->False,
+                    NumberMarks->False,
+                    FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                    CurrentValue["MouseOver"]],
+                    BaseStyle->{ShowStringCharacters -> True},
+                    FrameMargins->0,
+                    ImageSize->Automatic],
+                   Alignment->Left,
+                   Appearance->None,
+                   BaseStyle->{},
+                   ButtonFunction:>(SelectionMove[
+                    ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    BoxData[
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"LucasL", "[", "i", "]"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", " ", "48"}], "}"}]}], "]"}]], "Input"], 
+                    All]; SelectionMove[
+                    ButtonNotebook[], After, CellContents]),
+                   Evaluator->Automatic,
+                   ImageSize->Automatic,
+                   Method->"Preemptive"],
+                  DynamicBox[
+                   ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                    StandardForm]]],
+                 Annotation[#, 
+                  Dynamic[
+                   FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+                  "Tooltip"]& ],
+                AppearanceElements->{},
+                BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+                ImageSize->{Automatic, {1, 100}},
+                Scrollbars->{False, Automatic}], "\[SpanFromLeft]"}
+             },
+             AutoDelete->False,
+             BaselinePosition->{1, 1},
+             FrameStyle->GrayLevel[0.85],
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxDividers->{
+              "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Grid"],
+           Alignment->Top,
+           Background->Dynamic[
+             FEPrivate`If[
+              FEPrivate`And[
+               FEPrivate`SameQ[
+                FEPrivate`Head[Typeset`newq$$], String], 
+               FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+              RGBColor[1., 0.975, 0.95], 
+              GrayLevel[1]]],
+           BaselinePosition->Baseline,
+           FrameStyle->GrayLevel[0.85],
+           ImageSize->Automatic,
+           RoundingRadius->5,
+           StripOnInput->False],
+          
+          EventHandlerTag[{
+           "MouseEntered" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, True], 
+            "MouseExited" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, False], Method -> 
+            "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> True}]],
+         DynamicModuleValues:>{}]},
+       {
+        InterpretationBox[
+         StyleBox[
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEExpressions", "NecklaceAnimator"][20]],
+          AnimatorBoxOptions->{ImageSize->20}],
+         Animator[Appearance -> "Necklace", ImageSize -> 20],
+         BaseStyle->{"Deploy"}]}
+      },
+      BaselinePosition->{1, 1},
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     "Column"]}, Dynamic[
+     TrueQ[Typeset`open$$]],
+    BaseStyle->{Deployed -> True},
+    ImageSize->Automatic],
+   DynamicModuleValues:>{}],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "WolframAlphaShortInput",
+ CellLabel->"In[12]:=",ExpressionUUID->"b4c38b58-95a8-455e-b113-9ee4118a8373"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "3", ",", "4", ",", "7", ",", "11", ",", "18", ",", "29", ",", 
+   "47", ",", "76", ",", "123", ",", "199", ",", "322", ",", "521", ",", 
+   "843", ",", "1364", ",", "2207", ",", "3571", ",", "5778", ",", "9349", 
+   ",", "15127", ",", "24476", ",", "39603", ",", "64079", ",", "103682", ",",
+    "167761", ",", "271443", ",", "439204", ",", "710647", ",", "1149851", 
+   ",", "1860498", ",", "3010349", ",", "4870847", ",", "7881196", ",", 
+   "12752043", ",", "20633239", ",", "33385282", ",", "54018521", ",", 
+   "87403803", ",", "141422324", ",", "228826127", ",", "370248451", ",", 
+   "599074578", ",", "969323029", ",", "1568397607", ",", "2537720636", ",", 
+   "4106118243", ",", "6643838879", ",", "10749957122"}], "}"}]], "Output",
+ CellChangeTimes->{3.7889007801659007`*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"0f46be3c-6f5a-4e21-82a0-154731becfd4"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Verify that their digital root values follow a periodic pattern with length 24.
+\
+\>", "Section",
+ CellChangeTimes->{{3.7889030812790537`*^9, 
+  3.788903105423127*^9}},ExpressionUUID->"b8236b6c-dfad-47ef-ae44-\
+1251863f15bb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"digitalSum", "[", "k_Integer", "]"}], ":=", 
+  RowBox[{"Total", "@", 
+   RowBox[{"IntegerDigits", "[", "k", "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"digitalRoot", "[", "k_Integer", "]"}], ":=", 
+  RowBox[{"FixedPoint", "[", 
+   RowBox[{"digitalSum", ",", "k"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"digitalRoot", "[", 
+    RowBox[{"LucasL", "[", "i", "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "48"}], "}"}]}], "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7889031456838517`*^9, 3.788903224931217*^9}, {
+  3.7889032706083717`*^9, 3.788903304542664*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"7cb00ea4-ee11-4efa-a608-f4566e039b0e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "3", ",", "4", ",", "7", ",", "2", ",", "9", ",", "2", ",", "2", 
+   ",", "4", ",", "6", ",", "1", ",", "7", ",", "8", ",", "6", ",", "5", ",", 
+   "2", ",", "7", ",", "9", ",", "7", ",", "7", ",", "5", ",", "3", ",", "8", 
+   ",", "2", ",", "1", ",", "3", ",", "4", ",", "7", ",", "2", ",", "9", ",", 
+   "2", ",", "2", ",", "4", ",", "6", ",", "1", ",", "7", ",", "8", ",", "6", 
+   ",", "5", ",", "2", ",", "7", ",", "9", ",", "7", ",", "7", ",", "5", ",", 
+   "3", ",", "8", ",", "2"}], "}"}]], "Output",
+ CellChangeTimes->{{3.788903158647824*^9, 3.788903180123084*^9}, 
+   3.788903228915572*^9, 3.7889033261354923`*^9},
+ CellLabel->"Out[42]=",ExpressionUUID->"78b3690e-d4b6-4596-b9b0-393e7adf48d7"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.788903460553688*^9},
+ NumberMarks->False,
+ CellLabel->"In[46]:=",ExpressionUUID->"db3a2ea0-6079-4e29-9cc1-eed571da40b2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "3", ",", "4", ",", "7", ",", "2", ",", "9", ",", "2", ",", "2",
+      ",", "4", ",", "6", ",", "1", ",", "7", ",", "8", ",", "6", ",", "5", 
+     ",", "2", ",", "7", ",", "9", ",", "7", ",", "7", ",", "5", ",", "3", 
+     ",", "8", ",", "2", ",", "1", ",", "3", ",", "4", ",", "7", ",", "2", 
+     ",", "9", ",", "2", ",", "2", ",", "4", ",", "6", ",", "1", ",", "7", 
+     ",", "8", ",", "6", ",", "5", ",", "2", ",", "7", ",", "9", ",", "7", 
+     ",", "7", ",", "5", ",", "3", ",", "8", ",", "2"}], "}"}], ",", 
+   RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}]}], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[45]:=",ExpressionUUID->"3b9640fc-8f6d-4ff4-8e42-29199db8c1ed"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{{}, {}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6], 
+      LineBox[CompressedData["
+1:eJxdkDsKAkEQRAcjQwMDAwMVERGR9f93x8+qsUcQjL3CHNkjqNgl9FtYiqKn
+q6qreX/eHqUQQvb5v/j7XrnHEH9QBlaAdcNq9Hs1wxbead4A1zvptqHTiT5f
+F7o96PaxP0DODP5D6I2Qa4z5BHwK/Zmhepsj3wL+S0Pdt8L+2lD9bOC/hd4O
++XPMo+dJXPp7Q+sviSvfwfsncd13xL64+jnBX1z3FD5/KjA/w19c+hdD6y+J
+K9/17/8GaM4vSQ==
+       "]]}}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      NCache[
+       Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[1.6]}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[
+      1.6]}, {}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+       NCache[
+        Rational[7, 360], 0.019444444444444445`]], AbsoluteThickness[
+      1.6]}, {}}}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{False, False},
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 0},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameStyle->Automatic,
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{Automatic, Automatic},
+  GridLinesStyle->Directive[
+    GrayLevel[0.4, 0.5], 
+    AbsoluteThickness[1], 
+    AbsoluteDashing[{1, 2}]],
+  Method->{
+   "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 48.}, {0, 9.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.788903451995551*^9},
+ CellLabel->"Out[45]=",ExpressionUUID->"3972f9a0-f6bf-42f3-a7a3-92f4bf9f2538"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Find the numerical values in days for the following astronomical variables:
+Eclipse year (also known as Draconic year)
+Sidereal Year
+13 lunar months\
+\>", "Section",
+ CellChangeTimes->{{3.788903617853012*^9, 
+  3.78890364504171*^9}},ExpressionUUID->"bb674edc-d48a-4312-8ade-\
+884964ef39f4"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.788903432266636*^9, 3.7889034324586296`*^9}},
+ NumberMarks->False,ExpressionUUID->"d3453847-6d71-4493-b503-94ada03c8aa2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryParseResults",
+  DynamicModuleBox[{Typeset`q$$ = "Eclipse year", Typeset`newq$$ = 
+   "Eclipse year", Typeset`chosen$$ = "Quantity[None, \"DraconicYears\"]", 
+   Typeset`open$$ = False}, 
+   PaneSelectorBox[{False->
+    DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+     WolframAlphaClient`Private`assumptionsQ$$ = True}, 
+     TagBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {
+           InputFieldBox[Dynamic[Typeset`newq$$], String,
+            Appearance->None,
+            BaseStyle->{"CalculateInput"},
+            ContinuousAction->True,
+            Enabled->True,
+            FieldSize->{{1, 40}, {1, 
+               DirectedInfinity[1]}},
+            TrapSelection->False], 
+           ButtonBox[
+            TagBox[
+             TooltipBox[
+              StyleBox["\<\"\[RightGuillemet]\"\>",
+               StripOnInput->False,
+               LineColor->RGBColor[1, 0.5, 0],
+               FrontFaceColor->RGBColor[1, 0.5, 0],
+               BackFaceColor->RGBColor[1, 0.5, 0],
+               GraphicsColor->RGBColor[1, 0.5, 0],
+               FontColor->RGBColor[1, 0.5, 0]],
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource[
+                "WAStrings", "InterpretationAssumptions"], StandardForm]]],
+             Annotation[#, 
+              Dynamic[
+               FEPrivate`FrontEndResource[
+               "WAStrings", "InterpretationAssumptions"]], "Tooltip"]& ],
+            Appearance->None,
+            BaselinePosition->Baseline,
+            ButtonFunction:>(Quiet[
+               WolframAlpha[]]; Typeset`open$$ = True; 
+             WolframAlphaClient`Private`extrudeFromFastParse["Eclipse year", 
+               Defer[
+                Quantity[None, "DraconicYears"]], "Fast parse"]; 
+             Typeset`open$$ = False),
+            ContentPadding->False,
+            Evaluator->Automatic,
+            Method->"Queued"], 
+           ItemBox[
+            ButtonBox[
+             PaneSelectorBox[{True->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "OrangeSquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ], False->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "GraySquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ]}, Dynamic[WolframAlphaClient`Private`show$$],
+              ImageSize->All],
+             Appearance->None,
+             ButtonFunction:>(Quiet[
+                WolframAlpha[]]; If[
+                Or[
+                 CurrentValue["OptionKey"], 
+                 CurrentValue["AltKey"]], SelectionMove[
+                  ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                  Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                   "TextForm"], All], Typeset`open$$ = True; 
+                WolframAlphaClient`Private`extrudeFromFastParse[
+                 "Eclipse year", 
+                  Defer[
+                   Quantity[None, "DraconicYears"]], "Fast parse"]; 
+                Typeset`open$$ = False]),
+             Evaluator->Automatic,
+             Method->"Queued"],
+            Alignment->{Right, Top},
+            StripOnInput->False]},
+          {
+           PaneBox[
+            TagBox[
+             TooltipBox[
+              ButtonBox[
+               PaneSelectorBox[{False->
+                StyleBox[
+                 
+                 TemplateBox[{
+                  InterpretationBox["\[InvisibleSpace]", 1],
+                   "\"eclipse years\"","eclipse years","\"DraconicYears\""},
+                  "Quantity"],
+                 StripOnInput->False,
+                 NumberMarks->False], True->
+                StyleBox[
+                 
+                 TemplateBox[{
+                  InterpretationBox["\[InvisibleSpace]", 1],
+                   "\"eclipse years\"","eclipse years","\"DraconicYears\""},
+                  "Quantity"],
+                 StripOnInput->False,
+                 ShowSyntaxStyles->False,
+                 NumberMarks->False,
+                 FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                 CurrentValue["MouseOver"]],
+                BaseStyle->{ShowStringCharacters -> True},
+                FrameMargins->0,
+                ImageSize->Automatic],
+               Alignment->Left,
+               Appearance->None,
+               BaseStyle->{},
+               ButtonFunction:>(SelectionMove[
+                  ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                   BoxData[
+                    TemplateBox[{
+                    InterpretationBox["\[InvisibleSpace]", 1], 
+                    "\"eclipse years\"", "eclipse years", 
+                    "\"DraconicYears\""}, "Quantity", SyntaxForm -> Mod]], 
+                   "Input"], All]; SelectionMove[
+                  ButtonNotebook[], After, CellContents]),
+               Evaluator->Automatic,
+               ImageSize->Automatic,
+               Method->"Preemptive"],
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                StandardForm]]],
+             Annotation[#, 
+              Dynamic[
+               FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+              "Tooltip"]& ],
+            AppearanceElements->{},
+            BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+            ImageSize->{Automatic, {1, 100}},
+            Scrollbars->{False, Automatic}], "\[SpanFromLeft]", 
+           "\[SpanFromLeft]"}
+         },
+         AutoDelete->False,
+         BaselinePosition->{1, 1},
+         FrameStyle->GrayLevel[0.85],
+         GridBoxAlignment->{"Columns" -> {{Left}}},
+         GridBoxDividers->{
+          "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->Top,
+       Background->Dynamic[
+         FEPrivate`If[
+          FEPrivate`And[
+           FEPrivate`SameQ[
+            FEPrivate`Head[Typeset`newq$$], String], 
+           FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+          RGBColor[1., 0.975, 0.95], 
+          GrayLevel[1]]],
+       BaselinePosition->Baseline,
+       FrameStyle->GrayLevel[0.85],
+       ImageSize->Automatic,
+       RoundingRadius->5,
+       StripOnInput->False],
+      EventHandlerTag[{
+       "MouseEntered" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, True], "MouseExited" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, False], Method -> 
+        "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> True}]],
+     DynamicModuleValues:>{}], True->
+    TagBox[GridBox[{
+       {
+        DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+         WolframAlphaClient`Private`assumptionsQ$$ = True}, 
+         TagBox[
+          FrameBox[
+           TagBox[GridBox[{
+              {
+               InputFieldBox[Dynamic[Typeset`newq$$], String,
+                Appearance->None,
+                BaseStyle->{"CalculateInput"},
+                ContinuousAction->True,
+                Enabled->True,
+                FieldSize->{{1, 40}, {1, 
+                   DirectedInfinity[1]}},
+                TrapSelection->False], 
+               ButtonBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\"\[RightGuillemet]\"\>",
+                   StripOnInput->False,
+                   LineColor->RGBColor[1, 0.5, 0],
+                   FrontFaceColor->RGBColor[1, 0.5, 0],
+                   BackFaceColor->RGBColor[1, 0.5, 0],
+                   GraphicsColor->RGBColor[1, 0.5, 0],
+                   FontColor->RGBColor[1, 0.5, 0]],
+                  DynamicBox[
+                   ToBoxes[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "InterpretationAssumptions"], StandardForm]]],
+                 Annotation[#, 
+                  Dynamic[
+                   FEPrivate`FrontEndResource[
+                   "WAStrings", "InterpretationAssumptions"]], "Tooltip"]& ],
+                Appearance->None,
+                BaselinePosition->Baseline,
+                ButtonFunction:>(Quiet[
+                   WolframAlpha[]]; Typeset`open$$ = True; 
+                 WolframAlphaClient`Private`extrudeFromFastParse[
+                  "Eclipse year", 
+                   Defer[
+                    Quantity[None, "DraconicYears"]], "Fast parse"]; 
+                 Typeset`open$$ = False),
+                ContentPadding->False,
+                Evaluator->Automatic,
+                Method->"Queued"], 
+               ItemBox[
+                ButtonBox[
+                 PaneSelectorBox[{True->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "OrangeSquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ], False->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "GraySquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ]}, Dynamic[
+                  WolframAlphaClient`Private`show$$],
+                  ImageSize->All],
+                 Appearance->None,
+                 ButtonFunction:>(Quiet[
+                    WolframAlpha[]]; If[
+                    Or[
+                    CurrentValue["OptionKey"], 
+                    CurrentValue["AltKey"]], SelectionMove[
+                    ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                    NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                    "TextForm"], All], Typeset`open$$ = True; 
+                    WolframAlphaClient`Private`extrudeFromFastParse[
+                    "Eclipse year", 
+                    Defer[
+                    Quantity[None, "DraconicYears"]], "Fast parse"]; 
+                    Typeset`open$$ = False]),
+                 Evaluator->Automatic,
+                 Method->"Queued"],
+                Alignment->{Right, Top},
+                StripOnInput->False]},
+              {
+               PaneBox[
+                TagBox[
+                 TooltipBox[
+                  ButtonBox[
+                   PaneSelectorBox[{False->
+                    StyleBox[
+                    TemplateBox[{
+                    InterpretationBox["\[InvisibleSpace]", 1],
+                    "\"eclipse years\"","eclipse years","\"DraconicYears\""},
+                    "Quantity"],
+                    StripOnInput->False,
+                    NumberMarks->False], True->
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    InterpretationBox["\[InvisibleSpace]", 1],
+                    "\"eclipse years\"","eclipse years","\"DraconicYears\""},
+                    "Quantity"],
+                    StripOnInput->False,
+                    ShowSyntaxStyles->False,
+                    NumberMarks->False,
+                    FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                    CurrentValue["MouseOver"]],
+                    BaseStyle->{ShowStringCharacters -> True},
+                    FrameMargins->0,
+                    ImageSize->Automatic],
+                   Alignment->Left,
+                   Appearance->None,
+                   BaseStyle->{},
+                   ButtonFunction:>(SelectionMove[
+                    ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    BoxData[
+                    TemplateBox[{
+                    InterpretationBox["\[InvisibleSpace]", 1], 
+                    "\"eclipse years\"", "eclipse years", 
+                    "\"DraconicYears\""}, "Quantity", SyntaxForm -> Mod]], 
+                    "Input"], All]; SelectionMove[
+                    ButtonNotebook[], After, CellContents]),
+                   Evaluator->Automatic,
+                   ImageSize->Automatic,
+                   Method->"Preemptive"],
+                  DynamicBox[
+                   ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                    StandardForm]]],
+                 Annotation[#, 
+                  Dynamic[
+                   FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+                  "Tooltip"]& ],
+                AppearanceElements->{},
+                BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+                ImageSize->{Automatic, {1, 100}},
+                Scrollbars->{False, Automatic}], "\[SpanFromLeft]", 
+               "\[SpanFromLeft]"}
+             },
+             AutoDelete->False,
+             BaselinePosition->{1, 1},
+             FrameStyle->GrayLevel[0.85],
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxDividers->{
+              "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Grid"],
+           Alignment->Top,
+           Background->Dynamic[
+             FEPrivate`If[
+              FEPrivate`And[
+               FEPrivate`SameQ[
+                FEPrivate`Head[Typeset`newq$$], String], 
+               FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+              RGBColor[1., 0.975, 0.95], 
+              GrayLevel[1]]],
+           BaselinePosition->Baseline,
+           FrameStyle->GrayLevel[0.85],
+           ImageSize->Automatic,
+           RoundingRadius->5,
+           StripOnInput->False],
+          
+          EventHandlerTag[{
+           "MouseEntered" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, True], 
+            "MouseExited" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, False], Method -> 
+            "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> True}]],
+         DynamicModuleValues:>{}]},
+       {
+        InterpretationBox[
+         StyleBox[
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEExpressions", "NecklaceAnimator"][20]],
+          AnimatorBoxOptions->{ImageSize->20}],
+         Animator[Appearance -> "Necklace", ImageSize -> 20],
+         BaseStyle->{"Deploy"}]}
+      },
+      BaselinePosition->{1, 1},
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     "Column"]}, Dynamic[
+     TrueQ[Typeset`open$$]],
+    BaseStyle->{Deployed -> True},
+    ImageSize->Automatic],
+   DynamicModuleValues:>{}],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "WolframAlphaShortInput",
+ CellLabel->"In[48]:=",ExpressionUUID->"a7c10559-33f9-4e04-a90c-ea0f651bf803"],
+
+Cell[BoxData[
+ TemplateBox[{
+  InterpretationBox["\[InvisibleSpace]", 1],"\"eclipse years\"",
+   "eclipse years","\"DraconicYears\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.788903679052599*^9, 3.7889037073605685`*^9}},
+ CellLabel->"Out[48]=",ExpressionUUID->"07ef8c9e-27db-4817-bf3c-159987df8b5f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{"None", ",", "\"\<DraconicYears\>\""}], "]"}], ",", 
+   "\"\<Days\>\""}], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[49]:=",ExpressionUUID->"1d767708-4a24-4b35-8f65-db59663efd33"],
+
+Cell[BoxData[
+ TemplateBox[{"346.620075883`12.","\"days\"","days","\"Days\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.7889037147515974`*^9},
+ CellLabel->"Out[49]=",ExpressionUUID->"86340adf-bc29-4d1a-af91-fc445bff87d9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryParseResults",
+  DynamicModuleBox[{Typeset`q$$ = "Sidereal Year", Typeset`newq$$ = 
+   "Sidereal Year", Typeset`chosen$$ = "Quantity[None, \"SiderealYears\"]", 
+   Typeset`open$$ = False}, 
+   PaneSelectorBox[{False->
+    DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+     WolframAlphaClient`Private`assumptionsQ$$ = True}, 
+     TagBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {
+           InputFieldBox[Dynamic[Typeset`newq$$], String,
+            Appearance->None,
+            BaseStyle->{"CalculateInput"},
+            ContinuousAction->True,
+            Enabled->True,
+            FieldSize->{{1, 40}, {1, 
+               DirectedInfinity[1]}},
+            TrapSelection->False], 
+           ButtonBox[
+            TagBox[
+             TooltipBox[
+              StyleBox["\<\"\[RightGuillemet]\"\>",
+               StripOnInput->False,
+               LineColor->RGBColor[1, 0.5, 0],
+               FrontFaceColor->RGBColor[1, 0.5, 0],
+               BackFaceColor->RGBColor[1, 0.5, 0],
+               GraphicsColor->RGBColor[1, 0.5, 0],
+               FontColor->RGBColor[1, 0.5, 0]],
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource[
+                "WAStrings", "InterpretationAssumptions"], StandardForm]]],
+             Annotation[#, 
+              Dynamic[
+               FEPrivate`FrontEndResource[
+               "WAStrings", "InterpretationAssumptions"]], "Tooltip"]& ],
+            Appearance->None,
+            BaselinePosition->Baseline,
+            ButtonFunction:>(Quiet[
+               WolframAlpha[]]; Typeset`open$$ = True; 
+             WolframAlphaClient`Private`extrudeFromFastParse["Sidereal Year", 
+               Defer[
+                Quantity[None, "SiderealYears"]], "Fast parse"]; 
+             Typeset`open$$ = False),
+            ContentPadding->False,
+            Evaluator->Automatic,
+            Method->"Queued"], 
+           ItemBox[
+            ButtonBox[
+             PaneSelectorBox[{True->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "OrangeSquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ], False->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "GraySquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ]}, Dynamic[WolframAlphaClient`Private`show$$],
+              ImageSize->All],
+             Appearance->None,
+             ButtonFunction:>(Quiet[
+                WolframAlpha[]]; If[
+                Or[
+                 CurrentValue["OptionKey"], 
+                 CurrentValue["AltKey"]], SelectionMove[
+                  ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                  Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                   "TextForm"], All], Typeset`open$$ = True; 
+                WolframAlphaClient`Private`extrudeFromFastParse[
+                 "Sidereal Year", 
+                  Defer[
+                   Quantity[None, "SiderealYears"]], "Fast parse"]; 
+                Typeset`open$$ = False]),
+             Evaluator->Automatic,
+             Method->"Queued"],
+            Alignment->{Right, Top},
+            StripOnInput->False]},
+          {
+           PaneBox[
+            TagBox[
+             TooltipBox[
+              ButtonBox[
+               PaneSelectorBox[{False->
+                StyleBox[
+                 
+                 TemplateBox[{
+                  InterpretationBox["\[InvisibleSpace]", 1],
+                   "\"sidereal years\"","sidereal years","\"SiderealYears\""},
+                  "Quantity"],
+                 StripOnInput->False,
+                 NumberMarks->False], True->
+                StyleBox[
+                 
+                 TemplateBox[{
+                  InterpretationBox["\[InvisibleSpace]", 1],
+                   "\"sidereal years\"","sidereal years","\"SiderealYears\""},
+                  "Quantity"],
+                 StripOnInput->False,
+                 ShowSyntaxStyles->False,
+                 NumberMarks->False,
+                 FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                 CurrentValue["MouseOver"]],
+                BaseStyle->{ShowStringCharacters -> True},
+                FrameMargins->0,
+                ImageSize->Automatic],
+               Alignment->Left,
+               Appearance->None,
+               BaseStyle->{},
+               ButtonFunction:>(SelectionMove[
+                  ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                   BoxData[
+                    TemplateBox[{
+                    InterpretationBox["\[InvisibleSpace]", 1], 
+                    "\"sidereal years\"", "sidereal years", 
+                    "\"SiderealYears\""}, "Quantity", SyntaxForm -> Mod]], 
+                   "Input"], All]; SelectionMove[
+                  ButtonNotebook[], After, CellContents]),
+               Evaluator->Automatic,
+               ImageSize->Automatic,
+               Method->"Preemptive"],
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                StandardForm]]],
+             Annotation[#, 
+              Dynamic[
+               FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+              "Tooltip"]& ],
+            AppearanceElements->{},
+            BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+            ImageSize->{Automatic, {1, 100}},
+            Scrollbars->{False, Automatic}], "\[SpanFromLeft]", 
+           "\[SpanFromLeft]"}
+         },
+         AutoDelete->False,
+         BaselinePosition->{1, 1},
+         FrameStyle->GrayLevel[0.85],
+         GridBoxAlignment->{"Columns" -> {{Left}}},
+         GridBoxDividers->{
+          "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->Top,
+       Background->Dynamic[
+         FEPrivate`If[
+          FEPrivate`And[
+           FEPrivate`SameQ[
+            FEPrivate`Head[Typeset`newq$$], String], 
+           FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+          RGBColor[1., 0.975, 0.95], 
+          GrayLevel[1]]],
+       BaselinePosition->Baseline,
+       FrameStyle->GrayLevel[0.85],
+       ImageSize->Automatic,
+       RoundingRadius->5,
+       StripOnInput->False],
+      EventHandlerTag[{
+       "MouseEntered" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, True], "MouseExited" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, False], Method -> 
+        "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> True}]],
+     DynamicModuleValues:>{}], True->
+    TagBox[GridBox[{
+       {
+        DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+         WolframAlphaClient`Private`assumptionsQ$$ = True}, 
+         TagBox[
+          FrameBox[
+           TagBox[GridBox[{
+              {
+               InputFieldBox[Dynamic[Typeset`newq$$], String,
+                Appearance->None,
+                BaseStyle->{"CalculateInput"},
+                ContinuousAction->True,
+                Enabled->True,
+                FieldSize->{{1, 40}, {1, 
+                   DirectedInfinity[1]}},
+                TrapSelection->False], 
+               ButtonBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\"\[RightGuillemet]\"\>",
+                   StripOnInput->False,
+                   LineColor->RGBColor[1, 0.5, 0],
+                   FrontFaceColor->RGBColor[1, 0.5, 0],
+                   BackFaceColor->RGBColor[1, 0.5, 0],
+                   GraphicsColor->RGBColor[1, 0.5, 0],
+                   FontColor->RGBColor[1, 0.5, 0]],
+                  DynamicBox[
+                   ToBoxes[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "InterpretationAssumptions"], StandardForm]]],
+                 Annotation[#, 
+                  Dynamic[
+                   FEPrivate`FrontEndResource[
+                   "WAStrings", "InterpretationAssumptions"]], "Tooltip"]& ],
+                Appearance->None,
+                BaselinePosition->Baseline,
+                ButtonFunction:>(Quiet[
+                   WolframAlpha[]]; Typeset`open$$ = True; 
+                 WolframAlphaClient`Private`extrudeFromFastParse[
+                  "Sidereal Year", 
+                   Defer[
+                    Quantity[None, "SiderealYears"]], "Fast parse"]; 
+                 Typeset`open$$ = False),
+                ContentPadding->False,
+                Evaluator->Automatic,
+                Method->"Queued"], 
+               ItemBox[
+                ButtonBox[
+                 PaneSelectorBox[{True->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "OrangeSquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ], False->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "GraySquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ]}, Dynamic[
+                  WolframAlphaClient`Private`show$$],
+                  ImageSize->All],
+                 Appearance->None,
+                 ButtonFunction:>(Quiet[
+                    WolframAlpha[]]; If[
+                    Or[
+                    CurrentValue["OptionKey"], 
+                    CurrentValue["AltKey"]], SelectionMove[
+                    ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                    NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                    "TextForm"], All], Typeset`open$$ = True; 
+                    WolframAlphaClient`Private`extrudeFromFastParse[
+                    "Sidereal Year", 
+                    Defer[
+                    Quantity[None, "SiderealYears"]], "Fast parse"]; 
+                    Typeset`open$$ = False]),
+                 Evaluator->Automatic,
+                 Method->"Queued"],
+                Alignment->{Right, Top},
+                StripOnInput->False]},
+              {
+               PaneBox[
+                TagBox[
+                 TooltipBox[
+                  ButtonBox[
+                   PaneSelectorBox[{False->
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    InterpretationBox["\[InvisibleSpace]", 1],
+                    "\"sidereal years\"","sidereal years","\"SiderealYears\""},
+                    "Quantity"],
+                    StripOnInput->False,
+                    NumberMarks->False], True->
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    InterpretationBox["\[InvisibleSpace]", 1],
+                    "\"sidereal years\"","sidereal years","\"SiderealYears\""},
+                    "Quantity"],
+                    StripOnInput->False,
+                    ShowSyntaxStyles->False,
+                    NumberMarks->False,
+                    FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                    CurrentValue["MouseOver"]],
+                    BaseStyle->{ShowStringCharacters -> True},
+                    FrameMargins->0,
+                    ImageSize->Automatic],
+                   Alignment->Left,
+                   Appearance->None,
+                   BaseStyle->{},
+                   ButtonFunction:>(SelectionMove[
+                    ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    BoxData[
+                    TemplateBox[{
+                    InterpretationBox["\[InvisibleSpace]", 1], 
+                    "\"sidereal years\"", "sidereal years", 
+                    "\"SiderealYears\""}, "Quantity", SyntaxForm -> Mod]], 
+                    "Input"], All]; SelectionMove[
+                    ButtonNotebook[], After, CellContents]),
+                   Evaluator->Automatic,
+                   ImageSize->Automatic,
+                   Method->"Preemptive"],
+                  DynamicBox[
+                   ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                    StandardForm]]],
+                 Annotation[#, 
+                  Dynamic[
+                   FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+                  "Tooltip"]& ],
+                AppearanceElements->{},
+                BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+                ImageSize->{Automatic, {1, 100}},
+                Scrollbars->{False, Automatic}], "\[SpanFromLeft]", 
+               "\[SpanFromLeft]"}
+             },
+             AutoDelete->False,
+             BaselinePosition->{1, 1},
+             FrameStyle->GrayLevel[0.85],
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxDividers->{
+              "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Grid"],
+           Alignment->Top,
+           Background->Dynamic[
+             FEPrivate`If[
+              FEPrivate`And[
+               FEPrivate`SameQ[
+                FEPrivate`Head[Typeset`newq$$], String], 
+               FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+              RGBColor[1., 0.975, 0.95], 
+              GrayLevel[1]]],
+           BaselinePosition->Baseline,
+           FrameStyle->GrayLevel[0.85],
+           ImageSize->Automatic,
+           RoundingRadius->5,
+           StripOnInput->False],
+          
+          EventHandlerTag[{
+           "MouseEntered" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, True], 
+            "MouseExited" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, False], Method -> 
+            "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> True}]],
+         DynamicModuleValues:>{}]},
+       {
+        InterpretationBox[
+         StyleBox[
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEExpressions", "NecklaceAnimator"][20]],
+          AnimatorBoxOptions->{ImageSize->20}],
+         Animator[Appearance -> "Necklace", ImageSize -> 20],
+         BaseStyle->{"Deploy"}]}
+      },
+      BaselinePosition->{1, 1},
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     "Column"]}, Dynamic[
+     TrueQ[Typeset`open$$]],
+    BaseStyle->{Deployed -> True},
+    ImageSize->Automatic],
+   DynamicModuleValues:>{}],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "WolframAlphaShortInput",
+ CellLabel->"In[50]:=",ExpressionUUID->"1d1345ae-6b42-4e95-accc-30e98bfdd6b8"],
+
+Cell[BoxData[
+ TemplateBox[{
+  InterpretationBox["\[InvisibleSpace]", 1],"\"sidereal years\"",
+   "sidereal years","\"SiderealYears\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.7889037481839485`*^9},
+ CellLabel->"Out[50]=",ExpressionUUID->"e14050b4-5b95-47bc-87a0-e8fa9baa815d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{"None", ",", "\"\<SiderealYears\>\""}], "]"}], ",", 
+   "\"\<Days\>\""}], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[51]:=",ExpressionUUID->"74c72edd-ff04-437d-99f2-7a35bbe1eeb2"],
+
+Cell[BoxData[
+ TemplateBox[{"365.256360417`12.","\"days\"","days","\"Days\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.788903752420224*^9},
+ CellLabel->"Out[51]=",ExpressionUUID->"984ec590-215a-44a7-853b-a7ed1d3a2050"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryParseResults",
+  DynamicModuleBox[{Typeset`q$$ = "13 Lunar Months", Typeset`newq$$ = 
+   "13 Lunar Months", Typeset`chosen$$ = "Quantity[13, \"LunarMonths\"]", 
+   Typeset`open$$ = False}, 
+   PaneSelectorBox[{False->
+    DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+     WolframAlphaClient`Private`assumptionsQ$$ = False}, 
+     TagBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {
+           InputFieldBox[Dynamic[Typeset`newq$$], String,
+            Appearance->None,
+            BaseStyle->{"CalculateInput"},
+            ContinuousAction->True,
+            Enabled->True,
+            FieldSize->{{1, 40}, {1, 
+               DirectedInfinity[1]}},
+            TrapSelection->False], 
+           ItemBox[
+            ButtonBox[
+             PaneSelectorBox[{True->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "OrangeSquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ], False->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "GraySquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ]}, Dynamic[WolframAlphaClient`Private`show$$],
+              ImageSize->All],
+             Appearance->None,
+             ButtonFunction:>(Quiet[
+                WolframAlpha[]]; If[
+                Or[
+                 CurrentValue["OptionKey"], 
+                 CurrentValue["AltKey"]], SelectionMove[
+                  ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                  Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                   "TextForm"], All], Typeset`open$$ = True; 
+                WolframAlphaClient`Private`extrudeFromFastParse[
+                 "13 Lunar Months", 
+                  Defer[
+                   Quantity[13, "LunarMonths"]], "Fast parse"]; 
+                Typeset`open$$ = False]),
+             Evaluator->Automatic,
+             Method->"Queued"],
+            Alignment->{Right, Top},
+            StripOnInput->False]},
+          {
+           PaneBox[
+            TagBox[
+             TooltipBox[
+              ButtonBox[
+               PaneSelectorBox[{False->
+                StyleBox[
+                 
+                 TemplateBox[{
+                  "13","\"lunar months\"","lunar months","\"LunarMonths\""},
+                  "Quantity"],
+                 StripOnInput->False,
+                 NumberMarks->False], True->
+                StyleBox[
+                 
+                 TemplateBox[{
+                  "13","\"lunar months\"","lunar months","\"LunarMonths\""},
+                  "Quantity"],
+                 StripOnInput->False,
+                 ShowSyntaxStyles->False,
+                 NumberMarks->False,
+                 FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                 CurrentValue["MouseOver"]],
+                BaseStyle->{ShowStringCharacters -> True},
+                FrameMargins->0,
+                ImageSize->Automatic],
+               Alignment->Left,
+               Appearance->None,
+               BaseStyle->{},
+               ButtonFunction:>(SelectionMove[
+                  ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                   BoxData[
+                    
+                    TemplateBox[{
+                    "13", "\"lunar months\"", "lunar months", 
+                    "\"LunarMonths\""}, "Quantity", SyntaxForm -> Mod]], 
+                   "Input"], All]; SelectionMove[
+                  ButtonNotebook[], After, CellContents]),
+               Evaluator->Automatic,
+               ImageSize->Automatic,
+               Method->"Preemptive"],
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                StandardForm]]],
+             Annotation[#, 
+              Dynamic[
+               FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+              "Tooltip"]& ],
+            AppearanceElements->{},
+            BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+            ImageSize->{Automatic, {1, 100}},
+            Scrollbars->{False, Automatic}], "\[SpanFromLeft]"}
+         },
+         AutoDelete->False,
+         BaselinePosition->{1, 1},
+         FrameStyle->GrayLevel[0.85],
+         GridBoxAlignment->{"Columns" -> {{Left}}},
+         GridBoxDividers->{
+          "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->Top,
+       Background->Dynamic[
+         FEPrivate`If[
+          FEPrivate`And[
+           FEPrivate`SameQ[
+            FEPrivate`Head[Typeset`newq$$], String], 
+           FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+          RGBColor[1., 0.975, 0.95], 
+          GrayLevel[1]]],
+       BaselinePosition->Baseline,
+       FrameStyle->GrayLevel[0.85],
+       ImageSize->Automatic,
+       RoundingRadius->5,
+       StripOnInput->False],
+      EventHandlerTag[{
+       "MouseEntered" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, True], "MouseExited" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, False], Method -> 
+        "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> True}]],
+     DynamicModuleValues:>{}], True->
+    TagBox[GridBox[{
+       {
+        DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+         WolframAlphaClient`Private`assumptionsQ$$ = False}, 
+         TagBox[
+          FrameBox[
+           TagBox[GridBox[{
+              {
+               InputFieldBox[Dynamic[Typeset`newq$$], String,
+                Appearance->None,
+                BaseStyle->{"CalculateInput"},
+                ContinuousAction->True,
+                Enabled->True,
+                FieldSize->{{1, 40}, {1, 
+                   DirectedInfinity[1]}},
+                TrapSelection->False], 
+               ItemBox[
+                ButtonBox[
+                 PaneSelectorBox[{True->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "OrangeSquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ], False->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "GraySquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ]}, Dynamic[
+                  WolframAlphaClient`Private`show$$],
+                  ImageSize->All],
+                 Appearance->None,
+                 ButtonFunction:>(Quiet[
+                    WolframAlpha[]]; If[
+                    Or[
+                    CurrentValue["OptionKey"], 
+                    CurrentValue["AltKey"]], SelectionMove[
+                    ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                    NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                    "TextForm"], All], Typeset`open$$ = True; 
+                    WolframAlphaClient`Private`extrudeFromFastParse[
+                    "13 Lunar Months", 
+                    Defer[
+                    Quantity[13, "LunarMonths"]], "Fast parse"]; 
+                    Typeset`open$$ = False]),
+                 Evaluator->Automatic,
+                 Method->"Queued"],
+                Alignment->{Right, Top},
+                StripOnInput->False]},
+              {
+               PaneBox[
+                TagBox[
+                 TooltipBox[
+                  ButtonBox[
+                   PaneSelectorBox[{False->
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "13","\"lunar months\"","lunar months","\"LunarMonths\""},
+                    "Quantity"],
+                    StripOnInput->False,
+                    NumberMarks->False], True->
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "13","\"lunar months\"","lunar months","\"LunarMonths\""},
+                    "Quantity"],
+                    StripOnInput->False,
+                    ShowSyntaxStyles->False,
+                    NumberMarks->False,
+                    FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                    CurrentValue["MouseOver"]],
+                    BaseStyle->{ShowStringCharacters -> True},
+                    FrameMargins->0,
+                    ImageSize->Automatic],
+                   Alignment->Left,
+                   Appearance->None,
+                   BaseStyle->{},
+                   ButtonFunction:>(SelectionMove[
+                    ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    BoxData[
+                    
+                    TemplateBox[{
+                    "13", "\"lunar months\"", "lunar months", 
+                    "\"LunarMonths\""}, "Quantity", SyntaxForm -> Mod]], 
+                    "Input"], All]; SelectionMove[
+                    ButtonNotebook[], After, CellContents]),
+                   Evaluator->Automatic,
+                   ImageSize->Automatic,
+                   Method->"Preemptive"],
+                  DynamicBox[
+                   ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                    StandardForm]]],
+                 Annotation[#, 
+                  Dynamic[
+                   FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+                  "Tooltip"]& ],
+                AppearanceElements->{},
+                BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+                ImageSize->{Automatic, {1, 100}},
+                Scrollbars->{False, Automatic}], "\[SpanFromLeft]"}
+             },
+             AutoDelete->False,
+             BaselinePosition->{1, 1},
+             FrameStyle->GrayLevel[0.85],
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxDividers->{
+              "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Grid"],
+           Alignment->Top,
+           Background->Dynamic[
+             FEPrivate`If[
+              FEPrivate`And[
+               FEPrivate`SameQ[
+                FEPrivate`Head[Typeset`newq$$], String], 
+               FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+              RGBColor[1., 0.975, 0.95], 
+              GrayLevel[1]]],
+           BaselinePosition->Baseline,
+           FrameStyle->GrayLevel[0.85],
+           ImageSize->Automatic,
+           RoundingRadius->5,
+           StripOnInput->False],
+          
+          EventHandlerTag[{
+           "MouseEntered" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, True], 
+            "MouseExited" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, False], Method -> 
+            "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> True}]],
+         DynamicModuleValues:>{}]},
+       {
+        InterpretationBox[
+         StyleBox[
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEExpressions", "NecklaceAnimator"][20]],
+          AnimatorBoxOptions->{ImageSize->20}],
+         Animator[Appearance -> "Necklace", ImageSize -> 20],
+         BaseStyle->{"Deploy"}]}
+      },
+      BaselinePosition->{1, 1},
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     "Column"]}, Dynamic[
+     TrueQ[Typeset`open$$]],
+    BaseStyle->{Deployed -> True},
+    ImageSize->Automatic],
+   DynamicModuleValues:>{}],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "WolframAlphaShortInput",
+ CellLabel->"In[52]:=",ExpressionUUID->"a96c20d2-8a65-449a-89d2-963788837d01"],
+
+Cell[BoxData[
+ TemplateBox[{"13","\"lunar months\"","lunar months","\"LunarMonths\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.788903772859318*^9},
+ CellLabel->"Out[52]=",ExpressionUUID->"16d26287-51ca-46d2-976d-3f5e7de1450f"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{"13", ",", "\"\<LunarMonths\>\""}], "]"}], ",", "\"\<Days\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.7889043119680614`*^9},
+ NumberMarks->False,
+ CellLabel->"In[53]:=",ExpressionUUID->"d65af8cd-78e6-438a-a8ec-35223a8173af"],
+
+Cell[BoxData[
+ RowBox[{
+  TemplateBox[{
+   "383.8976435185185185185`7.9596278051226905","\"days\"","days","\"Days\""},
+   "Quantity"], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.7889043149947443`*^9, 
+  3.7889043173541117`*^9}},ExpressionUUID->"5082ab5b-67d1-4cd2-9b15-\
+0fe3a77f8e76"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Generate numerical values for the following variables
+eclipseyear = (L6 + 1/\[Phi])^2
+siderealyear = (L6 + 1/\[Phi])(L6 + \[Phi])
+lunations13 = (L6 + 1/\[Phi])(L6 + \[Phi]^2)\
+\>", "Section",
+ CellChangeTimes->{{3.7889043425841813`*^9, 
+  3.7889043835723047`*^9}},ExpressionUUID->"4fce1a28-33b0-4263-a224-\
+96237c370529"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eclipseyear", " ", "=", " ", 
+   RowBox[{"N", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"LucasL", "[", "6", "]"}], "+", 
+       RowBox[{"(", 
+        RowBox[{"1", "/", "GoldenRatio"}], ")"}]}], ")"}], "^", "2"}], 
+    "]"}]}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.788904270304298*^9, 3.7889042954495115`*^9}, {
+  3.788904876719042*^9, 3.788904879625281*^9}},
+ CellLabel->"In[75]:=",ExpressionUUID->"5fa9e6b0-8038-4f53-bfea-8b50ee51342f"],
+
+Cell[BoxData["346.63118960624627`"], "Output",
+ CellChangeTimes->{{3.788904275134301*^9, 3.7889042976214*^9}, 
+   3.788904884572934*^9},
+ CellLabel->"Out[75]=",ExpressionUUID->"2909e747-2a0d-4d6b-aa00-cda4a7d4fa7a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"siderealyear", " ", "=", " ", 
+   RowBox[{"N", "[", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"LucasL", "[", "6", "]"}], " ", "+", " ", 
+        RowBox[{"(", 
+         RowBox[{"1", "/", "GoldenRatio"}], ")"}]}], ")"}], " ", "*", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"LucasL", "[", "6", "]"}], "+", "GoldenRatio"}], ")"}]}], 
+     ")"}], "]"}]}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.788904393285533*^9, 3.7889045156932993`*^9}},
+ CellLabel->"In[65]:=",ExpressionUUID->"f2dc8f76-e9f6-4869-93ff-ff2891c42030"],
+
+Cell[BoxData["365.2492235949961`"], "Output",
+ CellChangeTimes->{3.788904522888771*^9},
+ CellLabel->"Out[65]=",ExpressionUUID->"94b5b60e-0801-45a6-8671-17325f6dbe68"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7889037294634743`*^9, 
+  3.7889037331214623`*^9}},ExpressionUUID->"6a704c9c-da09-4de3-9c41-\
+ab64ea851e66"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"lunation13", " ", "=", " ", 
+  RowBox[{"N", "[", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"LucasL", "[", "6", "]"}], " ", "+", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "/", "GoldenRatio"}], ")"}]}], ")"}], " ", "*", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"LucasL", "[", "6", "]"}], " ", "+", " ", 
+       RowBox[{"GoldenRatio", "^", "2"}]}], ")"}]}], ")"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.788904542512373*^9, 3.788904636356597*^9}},
+ CellLabel->"In[66]:=",ExpressionUUID->"5a6b0449-7c3c-486a-b95a-dc397370578e"],
+
+Cell[BoxData["383.86725758374604`"], "Output",
+ CellChangeTimes->{3.7889046378207655`*^9},
+ CellLabel->"Out[66]=",ExpressionUUID->"f0909594-a20f-4b4a-965b-3abe2b66439b"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Compare your generated values (interpreting them as measured in number of \
+days) to the observed values and report the relative error (in percents) in \
+each case. \
+\>", "Section",
+ CellChangeTimes->{{3.788905624213435*^9, 
+  3.788905633794112*^9}},ExpressionUUID->"f8a6d0a8-643b-4c2f-9a07-\
+380ef0724afb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"eclipseyear", " ", "-", " ", 
+      RowBox[{"UnitConvert", "[", 
+       RowBox[{
+        RowBox[{"Quantity", "[", 
+         RowBox[{"None", ",", "\"\<DraconicYears\>\""}], "]"}], ",", 
+        "\"\<Days\>\""}], "]"}]}], ")"}], "/", " ", 
+    RowBox[{"N", "[", 
+     RowBox[{"UnitConvert", "[", 
+      RowBox[{
+       RowBox[{"Quantity", "[", 
+        RowBox[{"None", ",", "\"\<DraconicYears\>\""}], "]"}], ",", 
+       "\"\<Days\>\""}], "]"}], "]"}]}], ")"}], "*", "100"}]], "Input",
+ CellChangeTimes->{{3.7889056588469915`*^9, 3.7889056681528625`*^9}},
+ CellLabel->"In[95]:=",ExpressionUUID->"6180a23f-d0ef-454c-992e-7811f0e73f67"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"346.63118960624627`", "\[VeryThinSpace]", "+", 
+    TemplateBox[{
+     RowBox[{"-", "346.620075883`12."}],"\"days\"","days","\"Days\""},
+     "Quantity"]}], ")"}], " ", 
+  RowBox[{"(", 
+   TemplateBox[{
+    "0.2885003118912089`",
+     RowBox[{"\"per \"", "\[InvisibleSpace]", "\"day\""}],"reciprocal days",
+     FractionBox["1", "\"Days\""]},
+    "Quantity"], ")"}]}]], "Output",
+ CellChangeTimes->{3.788905674610739*^9},
+ CellLabel->"Out[95]=",ExpressionUUID->"78d0c333-041f-4873-b41b-72997381bc9a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"siderealyear", " ", "-", " ", 
+      RowBox[{"UnitConvert", "[", 
+       RowBox[{
+        RowBox[{"Quantity", "[", 
+         RowBox[{"None", ",", "\"\<SiderealYears\>\""}], "]"}], ",", 
+        "\"\<Days\>\""}], "]"}]}], ")"}], "/", " ", 
+    RowBox[{"N", "[", 
+     RowBox[{"UnitConvert", "[", 
+      RowBox[{
+       RowBox[{"Quantity", "[", 
+        RowBox[{"None", ",", "\"\<SiderealYears\>\""}], "]"}], ",", 
+       "\"\<Days\>\""}], "]"}], "]"}]}], ")"}], "*", "100"}]], "Input",
+ CellChangeTimes->{{3.7889057028629665`*^9, 3.788905740578501*^9}},
+ CellLabel->"In[99]:=",ExpressionUUID->"54a50e3e-e702-49a9-ad4e-136869e49dd8"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"365.2492235949961`", "\[VeryThinSpace]", "+", 
+    TemplateBox[{
+     RowBox[{"-", "365.256360417`12."}],"\"days\"","days","\"Days\""},
+     "Quantity"]}], ")"}], " ", 
+  RowBox[{"(", 
+   TemplateBox[{
+    "0.273780311137727`",RowBox[{"\"per \"", "\[InvisibleSpace]", "\"day\""}],
+     "reciprocal days",FractionBox["1", "\"Days\""]},
+    "Quantity"], ")"}]}]], "Output",
+ CellChangeTimes->{3.788905873308587*^9},
+ CellLabel->"Out[99]=",ExpressionUUID->"1c9877a7-f3e7-40aa-aced-9eb93580319a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"lunation13", " ", "-", " ", 
+        RowBox[{"UnitConvert", "[", 
+         RowBox[{
+          RowBox[{"Quantity", "[", 
+           RowBox[{"13", ",", "\"\<LunarMonths\>\""}], "]"}], ",", 
+          "\"\<Days\>\""}], "]"}]}], ")"}], "/", " ", 
+      RowBox[{"N", "[", 
+       RowBox[{"UnitConvert", "[", 
+        RowBox[{
+         RowBox[{"Quantity", "[", 
+          RowBox[{"13", ",", "\"\<LunarMonths\>\""}], "]"}], ",", 
+         "\"\<Days\>\""}], "]"}], "]"}]}], ")"}], "*", "100"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.7889057648671656`*^9, 3.7889058315161157`*^9}, 
+   3.788905921940835*^9},
+ CellLabel->
+  "In[102]:=",ExpressionUUID->"a8aba68b-4d19-4fcf-abe4-b79c7d3d21a2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"383.86725758374604`", "\[VeryThinSpace]", "+", 
+    TemplateBox[{
+     RowBox[{"-", "383.8976435185185185185`7.9596278051226905"}],"\"days\"",
+      "days","\"Days\""},
+     "Quantity"]}], ")"}], " ", 
+  RowBox[{"(", 
+   TemplateBox[{
+    "0.26048610010594186`",
+     RowBox[{"\"per \"", "\[InvisibleSpace]", "\"day\""}],"reciprocal days",
+     FractionBox["1", "\"Days\""]},
+    "Quantity"], ")"}]}]], "Output",
+ CellChangeTimes->{{3.788905911961007*^9, 3.7889059256059446`*^9}},
+ CellLabel->
+  "Out[102]=",ExpressionUUID->"9087d3d7-d14f-406d-8c1f-ec0fafd30c7c"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7889059011690693`*^9, 
+  3.78890590864693*^9}},ExpressionUUID->"a8cbef4f-f3ca-466c-8215-\
+127a00a4ef84"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{759, 601},
+WindowMargins->{{Automatic, 598}, {222, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 154, 3, 30, "Input",ExpressionUUID->"93016707-905e-4ec8-8a2d-d88b7e60a35e"],
+Cell[CellGroupData[{
+Cell[737, 27, 150, 3, 98, "Title",ExpressionUUID->"67385996-a144-4b9c-8f10-cb8404e891ea"],
+Cell[890, 32, 179, 6, 85, "Subtitle",ExpressionUUID->"f07c4640-774a-4c14-8ea9-6c27c2add53e"],
+Cell[CellGroupData[{
+Cell[1094, 42, 182, 3, 67, "Section",ExpressionUUID->"29ac9303-cdc6-4b5e-9584-5ccbedb2649c"],
+Cell[CellGroupData[{
+Cell[1301, 49, 14155, 346, 65, "WolframAlphaShortInput",ExpressionUUID->"b4c38b58-95a8-455e-b113-9ee4118a8373"],
+Cell[15459, 397, 917, 14, 119, "Output",ExpressionUUID->"0f46be3c-6f5a-4e21-82a0-154731becfd4"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16425, 417, 235, 6, 143, "Section",ExpressionUUID->"b8236b6c-dfad-47ef-ae44-1251863f15bb"],
+Cell[CellGroupData[{
+Cell[16685, 427, 759, 17, 94, "Input",ExpressionUUID->"7cb00ea4-ee11-4efa-a608-f4566e039b0e"],
+Cell[17447, 446, 755, 12, 56, "Output",ExpressionUUID->"78b3690e-d4b6-4596-b9b0-393e7adf48d7"]
+}, Open  ]],
+Cell[18217, 461, 168, 3, 30, "Input",ExpressionUUID->"db3a2ea0-6079-4e29-9cc1-eed571da40b2"],
+Cell[CellGroupData[{
+Cell[18410, 468, 791, 14, 73, "Input",ExpressionUUID->"3b9640fc-8f6d-4ff4-8e42-29199db8c1ed"],
+Cell[19204, 484, 2131, 57, 251, "Output",ExpressionUUID->"3972f9a0-f6bf-42f3-a7a3-92f4bf9f2538"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21384, 547, 300, 8, 219, "Section",ExpressionUUID->"bb674edc-d48a-4312-8ade-884964ef39f4"],
+Cell[21687, 557, 170, 2, 30, "Input",ExpressionUUID->"d3453847-6d71-4493-b503-94ada03c8aa2"],
+Cell[CellGroupData[{
+Cell[21882, 563, 16594, 402, 67, "WolframAlphaShortInput",ExpressionUUID->"a7c10559-33f9-4e04-a90c-ea0f651bf803"],
+Cell[38479, 967, 307, 6, 38, "Output",ExpressionUUID->"07ef8c9e-27db-4817-bf3c-159987df8b5f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38823, 978, 286, 7, 30, "Input",ExpressionUUID->"1d767708-4a24-4b35-8f65-db59663efd33"],
+Cell[39112, 987, 227, 4, 38, "Output",ExpressionUUID->"86340adf-bc29-4d1a-af91-fc445bff87d9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39376, 996, 16633, 403, 67, "WolframAlphaShortInput",ExpressionUUID->"1d1345ae-6b42-4e95-accc-30e98bfdd6b8"],
+Cell[56012, 1401, 285, 6, 38, "Output",ExpressionUUID->"e14050b4-5b95-47bc-87a0-e8fa9baa815d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56334, 1412, 286, 7, 30, "Input",ExpressionUUID->"74c72edd-ff04-437d-99f2-7a35bbe1eeb2"],
+Cell[56623, 1421, 225, 4, 38, "Output",ExpressionUUID->"984ec590-215a-44a7-853b-a7ed1d3a2050"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56885, 1430, 13670, 338, 65, "WolframAlphaShortInput",ExpressionUUID->"a96c20d2-8a65-449a-89d2-963788837d01"],
+Cell[70558, 1770, 233, 4, 36, "Output",ExpressionUUID->"16d26287-51ca-46d2-976d-3f5e7de1450f"]
+}, Open  ]],
+Cell[70806, 1777, 325, 8, 30, "Input",ExpressionUUID->"d65af8cd-78e6-438a-a8ec-35223a8173af"],
+Cell[71134, 1787, 348, 8, 98, "Input",ExpressionUUID->"5082ab5b-67d1-4cd2-9b15-0fe3a77f8e76"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71519, 1800, 331, 8, 181, "Section",ExpressionUUID->"4fce1a28-33b0-4263-a224-96237c370529"],
+Cell[CellGroupData[{
+Cell[71875, 1812, 518, 13, 52, "Input",ExpressionUUID->"5fa9e6b0-8038-4f53-bfea-8b50ee51342f"],
+Cell[72396, 1827, 215, 3, 34, "Output",ExpressionUUID->"2909e747-2a0d-4d6b-aa00-cda4a7d4fa7a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[72648, 1835, 626, 16, 52, "Input",ExpressionUUID->"f2dc8f76-e9f6-4869-93ff-ff2891c42030"],
+Cell[73277, 1853, 166, 2, 34, "Output",ExpressionUUID->"94b5b60e-0801-45a6-8671-17325f6dbe68"]
+}, Open  ]],
+Cell[73458, 1858, 156, 3, 30, "Input",ExpressionUUID->"6a704c9c-da09-4de3-9c41-ab64ea851e66"],
+Cell[CellGroupData[{
+Cell[73639, 1865, 602, 15, 30, "Input",ExpressionUUID->"5a6b0449-7c3c-486a-b95a-dc397370578e"],
+Cell[74244, 1882, 169, 2, 34, "Output",ExpressionUUID->"f0909594-a20f-4b4a-965b-3abe2b66439b"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[74462, 1890, 318, 7, 143, "Section",ExpressionUUID->"f8a6d0a8-643b-4c2f-9a07-380ef0724afb"],
+Cell[CellGroupData[{
+Cell[74805, 1901, 716, 18, 52, "Input",ExpressionUUID->"6180a23f-d0ef-454c-992e-7811f0e73f67"],
+Cell[75524, 1921, 552, 14, 38, "Output",ExpressionUUID->"78d0c333-041f-4873-b41b-72997381bc9a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[76113, 1940, 715, 18, 52, "Input",ExpressionUUID->"54a50e3e-e702-49a9-ad4e-136869e49dd8"],
+Cell[76831, 1960, 544, 13, 38, "Output",ExpressionUUID->"1c9877a7-f3e7-40aa-aced-9eb93580319a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77412, 1978, 844, 23, 94, "Input",ExpressionUUID->"a8aba68b-4d19-4fcf-abe4-b79c7d3d21a2"],
+Cell[78259, 2003, 615, 16, 38, "Output",ExpressionUUID->"9087d3d7-d14f-406d-8c1f-ec0fafd30c7c"]
+}, Open  ]],
+Cell[78889, 2022, 153, 3, 30, "Input",ExpressionUUID->"a8cbef4f-f3ca-466c-8215-127a00a4ef84"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
